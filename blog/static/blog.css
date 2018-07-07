@@ -1,0 +1,32 @@
+h1 {
+    color: #008080;
+    font-family: 'Arial Narrow';
+}
+h2{
+    color: #C71585;
+    font-family: 'Arial Narrow';
+}
+
+h2 a {
+    color: #778899;
+    font-family: 'Arial Narrow';
+}
+
+h3 {
+    color: #DB7093;
+    font-family: 'Arial Narrow';
+}
+
+p {
+    color: #696969;
+    font-family: 'Arial Narrow';
+}
+
+li {
+    color:#696969;
+    font-family: 'Arial Narrow';
+}
+
+body{
+    padding:40px;
+}

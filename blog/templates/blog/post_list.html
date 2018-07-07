@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<html>
+<head>  
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'blog.css' %}">
+
+    <title>Sexy</title>
+    
+</head>  
+<body>
+        <h1>DATASAURUS REX</h1>
+        <h2>science at its best - fun, love, statistics and techno </h2>
+        <h3>a really, really, really interesting blog (like for real) </h3>
+        <p>Hello World!</p>
+        <p>Welcome to my Blog about magic </p>
+        <ul><li>dinosaurs</li><li>cats</li><li>and robots!</li></ul>   
+        <p>Unicorns are not welcome - sorry but you are so mainstream !</p>
+    <div> 
+            {% for post in post %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
